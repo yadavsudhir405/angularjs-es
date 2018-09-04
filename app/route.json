@@ -1,0 +1,10 @@
+[
+  {
+    "id": "demo",
+    "title": "Main Page",
+    "routeName": "",
+    "templateUrl": "",
+    "controller": "",
+    "controllerAs":"dummyController"
+  }
+]
