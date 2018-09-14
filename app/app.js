@@ -1,17 +1,22 @@
 import angular from "angular";
 import uiRouter from "@uirouter/angularjs";
-import {default as demoModule} from "demo";
+import {default as demoApp } from "./demo/index";
+import demoControllerTemplate from "./demo/template/demo.html";
+import img from "./images/webpack-es6.png";
 
-const modules = [
-    demoModule,
+let modules = [
     uiRouter,
+    demoApp
 ];
 
-const app = angular.module('mainModule', modules);
-app.config(['$stateProvider', '$urlRouterProvider'],function ($stateProvider, $urlRouterProvider) {
+let app = angular.module('root', modules);
+app.config(function ($stateProvider,$locationProvider, $urlRouterProvider) {
+    $locationProvider.html5Mode(true);
     $stateProvider.state('Home',{
         url: '/',
-        templateUrl: './demo/template/demo.html',
-        controller: 'DemoController'
+        template: demoControllerTemplate,
+        controller: 'DemoController',
+        controllerAs: 'demoCtrl'
     });
+    $urlRouterProvider.otherwise('/');
 });

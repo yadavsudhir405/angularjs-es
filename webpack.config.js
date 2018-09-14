@@ -2,7 +2,7 @@ const cwd = process.cwd();
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const rules = [
     {
         test: /\.js$/,
@@ -11,26 +11,36 @@ const rules = [
                 loader: 'babel-loader',
                 options: {
                     plugins: [
-                        ['angularjs-annotate', { explicitOnly: false }]
+                        ['angularjs-annotate', {explicitOnly: false}]
                     ],
-                    presets: ['@babel/preset-env']
+                    presets: ['babel-preset-env']
                 }
             }
-        ],
-        include: [
-            path.resolve(cwd, 'src')
         ],
         exclude: /node_modules/
     },
     {
+        test: /\.(jpg|png)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'images/',
+                    publicPath: 'images/'
+                }
+            }
+        ]
+    },
+    {
         test: /\.(html)$/,
         use: [{
-            loader: 'html-loader',
-            options: {
-                minimize: false,
-                collapseWhitespace: false
-            }
-        }]
+            loader: 'raw-loader',
+        }],
+    },
+    {
+        test: /\.txt$/,
+        use: 'raw-loader'
     },
     {
         test: /\.scss$/,
@@ -40,31 +50,27 @@ const rules = [
             },
             {
                 loader: 'css-loader',
-                options: { sourceMap: true }
+                options: {sourceMap: true}
             },
             {
                 loader: 'sass-loader',
-                options: { sourceMap: true }
+                options: {sourceMap: true}
             }
         ]
     }
 ];
-
 const plugins = [
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor',
-        minChunks: module => module.context && /node_modules/.test(module.context),
-        filename: '[name].bundle-[hash]-[id].js'
     }),
     new HtmlWebpackPlugin({
         minify: false,
         template: path.join(__dirname, 'app/index.html'),
         inject: 'body',
         hash: false
-    })
+    }),
+    new CleanWebpackPlugin('dist')
+
 ];
 
 if (process.env.NODE_ENV === 'dev') {
@@ -111,26 +117,14 @@ module.exports = {
     },
     devtool: 'sourcemap',
     devServer: {
-        contentBase: path.resolve(__dirname, 'build'),
-        compress: true,
-        inline: true,
-        hot: true,
-        quiet: true,
-        port: 4000,
-        historyApiFallback: true,
-        stats: {
-            chunks: false,
-            chunkModules: false
-        }
+        contentBase: path.join(__dirname, 'dist')
     },
     entry: {
-        app: ['./app/app.js']
+        entry: './app/app.js'
     },
     output: {
-        filename: '[name].bundle-[hash]-[id].js',
-        chunkFilename: '[name].chunk-[hash]-[id].js',
-        sourceMapFilename: '[name].bundle-[hash]-[id].map',
-        path: path.join(__dirname, 'build')
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
     },
     module: {
         rules
