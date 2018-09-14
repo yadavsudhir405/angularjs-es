@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const rules = [
     {
         test: /\.js$/,
@@ -25,9 +26,8 @@ const rules = [
             {
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
-                    outputPath: 'images/',
-                    publicPath: 'images/'
+                    name: '[path][name].[ext]',
+
                 }
             }
         ]

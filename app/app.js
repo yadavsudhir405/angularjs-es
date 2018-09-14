@@ -2,7 +2,8 @@ import angular from "angular";
 import uiRouter from "@uirouter/angularjs";
 import {default as demoApp } from "./demo/index";
 import demoControllerTemplate from "./demo/template/demo.html";
-import img from "./images/webpack-es6.png";
+import img from "./assets/webpack-es6.png";
+import img1 from "./assets/images/demo/angular.png";
 
 let modules = [
     uiRouter,
