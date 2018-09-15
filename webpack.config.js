@@ -27,7 +27,6 @@ const rules = [
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',
-
                 }
             }
         ]
@@ -117,7 +116,8 @@ module.exports = {
     },
     devtool: 'sourcemap',
     devServer: {
-        contentBase: path.join(__dirname, 'dist')
+        contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: true
     },
     entry: {
         entry: './app/app.js'

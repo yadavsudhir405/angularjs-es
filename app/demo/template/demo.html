@@ -1,3 +1,6 @@
 <h1>This is  edited the Demo Page {{demoCtrl.greetingMessage}}</h1>
-<img src="/app/assets/images/demo/angular.png">
-{{demoCtrl.text}}
+<img src="/app/demo/images/angular.png">
+<div ng-if="demoCtrl.show">
+    {{demoCtrl.text}}
+</div>
+<button ng-click="demoCtrl.handleClick()"> GO</button>

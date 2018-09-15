@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="root" >
+<html lang="en" ng-app="root" ng-controller="MainController as mainCtrl">
 <head>
-    <base href="/app">
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AngularJS Webpack</title>
 </head>
-<body>
+<body >
 Header place
-<img src="../app/assets/webpack-es6.png" alt="webpack">
-<div ui-view>
+<img src="../app/webpack-es6.png" alt="webpack">
+<a href="/home" > Home</a>
+<a href="/login" > Login</a>
+<ui-view>
 
-</div>
+</ui-view>
+
 
 </body>
 </html>
