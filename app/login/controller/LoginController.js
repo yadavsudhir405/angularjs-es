@@ -1,6 +1,6 @@
 class LoginController {
     constructor(){
-        this.message = "Login Page";
+        this.message = "Login Page edited";
     }
 }
 

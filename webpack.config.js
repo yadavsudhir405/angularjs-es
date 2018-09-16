@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const rules = [
     {
         test: /\.js$/,
@@ -68,6 +69,11 @@ const plugins = [
         inject: 'body',
         hash: false
     }),
+    new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css"
+    }),
+    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin('dist')
 
 ];
@@ -84,6 +90,10 @@ if (process.env.NODE_ENV === 'production') {
         new webpack.LoaderOptionsPlugin({
             minimize: true,
             debug: false
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
         }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
@@ -117,6 +127,7 @@ module.exports = {
     devtool: 'sourcemap',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
+        hot: true,
         historyApiFallback: true
     },
     entry: {
