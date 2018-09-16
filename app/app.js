@@ -4,7 +4,6 @@ import uiRouter from "@uirouter/angularjs";
 import {default as demoApp } from "./demo/index";
 import {default as loginModule} from "./login/index";
 
-import {default as mainController } from "./component/MainController";
 import demoControllerTemplate from "./demo/template/demo.html";
 import loginControllerTemplate from "./login/template/Login.html";
 import img from "./webpack-es6.png";
@@ -33,11 +32,4 @@ app.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $logP
         controllerAs: 'loginCtrl'
     });
     $urlRouterProvider.otherwise('/');
-});
-
-app.controller('MainController', function () {
-    console.log("Initializing the App!!");
-});
-app.run(function () {
-    console.log("App is running");
 });
