@@ -119,3 +119,4 @@ fabric.properties
 .idea/
 package-lock.json
 *.map
+dist/
