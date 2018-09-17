@@ -57,6 +57,17 @@ const rules = [
                 options: {sourceMap: true}
             }
         ]
+    },
+    {
+        test: /\.css/,
+        use:[
+            {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                }
+            },
+            "css-loader"
+        ]
     }
 ];
 const plugins = [
