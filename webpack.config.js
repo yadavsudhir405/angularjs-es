@@ -70,12 +70,11 @@ const plugins = [
         hash: false
     }),
     new MiniCssExtractPlugin({
-        filename: "[name].css",
+        filename: "style.css",
         chunkFilename: "[id].css"
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin('dist')
-
 ];
 
 if (process.env.NODE_ENV === 'dev') {
