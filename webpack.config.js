@@ -46,7 +46,7 @@ const rules = [
         test: /\.scss$/,
         use: [
             {
-                loader: 'style-loader'
+                loader: MiniCssExtractPlugin.loader
             },
             {
                 loader: 'css-loader',
@@ -56,17 +56,6 @@ const rules = [
                 loader: 'sass-loader',
                 options: {sourceMap: true}
             }
-        ]
-    },
-    {
-        test: /\.css/,
-        use:[
-            {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                }
-            },
-            "css-loader"
         ]
     }
 ];
