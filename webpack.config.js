@@ -89,46 +89,11 @@ if (process.env.NODE_ENV === 'production') {
         new webpack.LoaderOptionsPlugin({
             minimize: true,
             debug: false
-        }),
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            beautify: false,
-            mangle: {
-                screw_ie8: true
-            },
-            compress: {
-                unused: true,
-                dead_code: true,
-                drop_debugger: true,
-                conditionals: true,
-                evaluate: true,
-                drop_console: true,
-                sequences: true,
-                booleans: true,
-                screw_ie8: true,
-                warnings: false
-            },
-            comments: false
         })
     );
 }
 
 module.exports = {
-    cache: true,
-    context: __dirname,
-    performance: {
-        hints: false
-    },
-    devtool: 'sourcemap',
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        hot: true,
-        historyApiFallback: true
-    },
     entry: {
         entry: './app/app.js'
     },
@@ -136,17 +101,18 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    devtool: 'sourcemap',
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        hot: true,
+        historyApiFallback: true
+    },
     module: {
         rules
-    },
-    node: {
-        fs: 'empty',
-        global: true,
-        crypto: 'empty'
     },
     resolve: {
         extensions: ['.js'],
         modules: ['node_modules', cwd]
     },
-    plugins
+    plugins: plugins
 };

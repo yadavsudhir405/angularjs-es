@@ -4,8 +4,9 @@
   "description": "This is demo application built on angularjs with EC6",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-build": "webpack",
-    "build": "npm run dev-build",
+    "build-dev": "env NODE_ENV=development webpack",
+    "build-prod": "env NODE_ENV=production webpack",
+    "build": "npm run build-dev",
     "start-dev": "webpack-dev-server"
   },
   "author": "sudhiris056 <yadavsudhir405@gmail.com>",
