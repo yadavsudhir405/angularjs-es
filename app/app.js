@@ -10,8 +10,6 @@ import loginControllerTemplate from "./login/template/Login.html";
 import styles from "./assets/styles/style.scss";
 import img from "./assets/images/webpack-es6.png";
 
-console.log(users.getUsers());
-console.log(lodash.join(['App', 'module', 'loaded!']));
 let modules = [
     uiRouter,
     demoApp,
