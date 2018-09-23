@@ -6,9 +6,14 @@ import {default as loginModule} from "./login/index";
 
 import demoControllerTemplate from "./demo/template/demo.html";
 import loginControllerTemplate from "./login/template/Login.html";
+import lodash from "lodash";
+import {default as users} from "./common/users";
+
 import styles from "./assets/styles/style.scss";
 import img from "./assets/images/webpack-es6.png";
 
+console.log(users.getUsers());
+console.log(lodash.join(['App', 'module', 'loaded!']));
 let modules = [
     uiRouter,
     demoApp,

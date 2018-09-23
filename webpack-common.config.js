@@ -5,11 +5,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const entries = {
-    entry: './app/app.js'
+    app: './app/app.js',
+
 };
 const outputs = {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+
 };
 const rules = [
     {
