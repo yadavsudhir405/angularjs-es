@@ -9,17 +9,6 @@ const devConfigs = {
         hot: true,
         historyApiFallback: true
     },
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: 'all'
-                }
-            }
-        }
-    }
 };
 
 module.exports = merge(commonConfigs, devConfigs);

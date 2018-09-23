@@ -95,5 +95,17 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         modules: ['node_modules']
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'all'
+                }
+            }
+        }
     }
+
 };
