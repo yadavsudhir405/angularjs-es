@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const devMode = process.env.NODE_ENV !== "production";
 
 const entries = {
     app: './app/app.js',
@@ -54,7 +55,7 @@ const rules = [
         test: /\.scss$/,
         use: [
             {
-                loader: MiniCssExtractPlugin.loader
+                loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader
             },
             {
                 loader: 'css-loader',
@@ -79,8 +80,8 @@ const commonPlugins = [
         hash: false
     }),
     new MiniCssExtractPlugin({
-        filename: "style.css",
-        chunkFilename: "[id].css"
+        filename: devMode ? '[name].css' : '[name].[hash].css',
+        chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin('dist')
