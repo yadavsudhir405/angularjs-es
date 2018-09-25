@@ -3,6 +3,7 @@ import uiRouter from "@uirouter/angularjs";
 
 import {default as demoApp } from "./demo/index";
 import {default as loginModule} from "./login/index";
+import { default as headerModule } from "./header/index";
 
 import demoControllerTemplate from "./demo/template/demo.html";
 import loginControllerTemplate from "./login/template/Login.html";
@@ -12,6 +13,7 @@ import img from "./assets/images/webpack-es6.png";
 
 let modules = [
     uiRouter,
+    headerModule,
     demoApp,
     loginModule
 ];
