@@ -4,7 +4,7 @@ const commonConfigs =  require('./webpack-common.config');
 
 const devConfigs = {
     mode: 'development',
-    devtool: 'sourcemap',
+    devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         hot: true,

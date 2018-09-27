@@ -86,6 +86,7 @@ const commonPlugins = [
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin('dist')
 ];
+
 module.exports = {
     entry: entries,
     output: outputs,

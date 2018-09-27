@@ -6,7 +6,7 @@ const commonConfigs = require('./webpack-common.config');
 const  prodConfigs = {
     mode: "production",
     devtool: "source-map",
-    optimization: {
+   optimization: {
         minimizer : [
             new UglifyJsPlugin({
                 cache: true,
@@ -16,5 +16,6 @@ const  prodConfigs = {
             new OptimizeCssPlugin({})
         ]
     }
+
 };
 module.exports =  merge(commonConfigs, prodConfigs);
