@@ -4,9 +4,11 @@ import uiRouter from "@uirouter/angularjs";
 import {default as demoApp } from "./demo/index";
 import {default as loginModule} from "./login/index";
 import { default as headerModule } from "./header/index";
+import {default as unathorizedHandleModule } from "./unathorized/index";
 
 import demoControllerTemplate from "./demo/template/demo.html";
 import loginControllerTemplate from "./login/template/Login.html";
+import unathorizedControllerTemplate from "./unathorized/template/unathorizedHandlerPage.html";
 
 import styles from "./assets/styles/style.scss";
 import img from "./assets/images/webpack-es6.png";
@@ -14,6 +16,7 @@ import img from "./assets/images/webpack-es6.png";
 let modules = [
     uiRouter,
     headerModule,
+    unathorizedHandleModule,
     demoApp,
     loginModule
 ];
@@ -34,6 +37,12 @@ app.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $logP
         template: loginControllerTemplate,
         controller: 'LoginController',
         controllerAs: 'loginCtrl'
+    });
+    $stateProvider.state('unathorized',{
+        url: '/unathorized',
+        template: unathorizedControllerTemplate,
+        controller: 'UnathorizedController',
+        controllerAs: 'unathorizedCtrl'
     });
     $urlRouterProvider.otherwise('/');
 });
