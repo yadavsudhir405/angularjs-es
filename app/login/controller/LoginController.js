@@ -1,8 +1,8 @@
 class LoginController {
-    constructor(myConstant){
+    constructor(constantService){
         this.message = "Login Page edited";
-        this.constant = myConstant;
+        this.constant = constantService.getConstant();
     }
 }
-LoginController.$inject = ['MY_CONSTANT'];
+LoginController.$inject = ['ConstantService'];
 export default LoginController;

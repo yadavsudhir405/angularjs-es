@@ -46,6 +46,13 @@ myApp.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $lo
     });
     $urlRouterProvider.otherwise('/home');
 });
+myApp.service('ConstantService', function (MY_CONSTANT) {
+    return {
+        getConstant: function () {
+            return MY_CONSTANT;
+        }
+    }
+});
 
 var bootstrapModule =  angular.module('bootstrapModule', []);
 
