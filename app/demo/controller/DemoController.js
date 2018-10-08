@@ -6,6 +6,13 @@ class DemoController {
         this.show = false;
         this.$location = $location;
         this.$window =  $window;
+        this.doRedirection();
+    }
+    doRedirection(){
+        let name = this.$location.search().name;
+        if(name !== 'sudhir'){
+            this.$location.path("/unathorized");
+        }
     }
     handleClick(){
         console.log("Button Clicked");
