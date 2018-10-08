@@ -10,7 +10,7 @@ class DemoController {
     }
     doRedirection(){
         let name = this.$location.search().name;
-        if(name !== 'sudhir'){
+        if(name !== 'admin'){
             this.$location.path("/unathorized");
         }
     }
