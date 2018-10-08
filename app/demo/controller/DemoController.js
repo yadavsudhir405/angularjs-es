@@ -10,9 +10,9 @@ class DemoController {
     }
     doRedirection(){
         let name = this.$location.search().name;
-        if(name !== 'admin'){
+        /*if(name !== 'admin'){
             this.$location.path("/unathorized");
-        }
+        }*/
     }
     handleClick(){
         console.log("Button Clicked");

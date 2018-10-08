@@ -21,8 +21,8 @@ let modules = [
     loginModule
 ];
 
-const app = angular.module('root', modules);
-app.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $logProvider) {
+const myApp = angular.module('myApp', modules);
+myApp.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $logProvider) {
     $logProvider.debugEnabled(true);
     $locationProvider.html5Mode(true);
     $stateProvider.state('Home',{
@@ -44,5 +44,36 @@ app.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $logP
         controller: 'UnathorizedController',
         controllerAs: 'unathorizedCtrl'
     });
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
+});
+
+var bootstrapModule =  angular.module('bootstrapModule', []);
+
+bootstrapModule.factory('bootstrapper', function ($q, $timeout) {
+    return {
+        bootstrap: function (appName) {
+            var deferred = $q.defer();
+
+            $timeout(function () {
+                var myApp = angular.module(appName);
+                myApp.constant('MY_CONSTANT', 'Yaaay!');
+                angular.bootstrap(document, [appName]);
+                deferred.resolve();
+            }, 2000);
+
+            return deferred.promise;
+        }
+    }
+});
+
+bootstrapModule.run(function (bootstrapper) {
+    bootstrapper.bootstrap('myApp').then(function () {
+        appContainer.remove();
+    })
+});
+
+var appContainer =  document.createElement("div");
+
+angular.element(document).ready(function () {
+    angular.bootstrap(appContainer, ['bootstrapModule'])
 });
