@@ -36,7 +36,18 @@ myApp.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $lo
         url: '/login',
         template: loginControllerTemplate,
         controller: 'LoginController',
-        controllerAs: 'loginCtrl'
+        controllerAs: 'loginCtrl',
+        resolve: {
+            constantService : 'ConstantService',
+            promiseObj: function ($timeout, $q, constantService) {
+                let defer = $q.defer();
+                $timeout(function () {
+                    constantService.setConstant("Hello World");
+                    defer.resolve();
+                },10000);
+                return defer.promise;
+            }
+        }
     });
     $stateProvider.state('unathorized',{
         url: '/unathorized',

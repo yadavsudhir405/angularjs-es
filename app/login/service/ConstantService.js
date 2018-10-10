@@ -7,11 +7,14 @@ class ConstantService {
         return this.constant;
     }
 
-    static serviceFactory(constant){
-        ConstantService.instance = new ConstantService(constant);
+    setConstant(value){
+        this.constant =  value;
+    }
+
+    static serviceFactory(){
+        ConstantService.instance = new ConstantService();
         return ConstantService.instance;
     }
 }
 
-ConstantService.serviceFactory.$inject = ['MY_CONSTANT'];
 export default ConstantService.serviceFactory;
