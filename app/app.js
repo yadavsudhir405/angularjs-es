@@ -44,7 +44,7 @@ myApp.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $lo
                 $timeout(function () {
                     constantService.setConstant("Hello World");
                     defer.resolve();
-                },10000);
+                },10);
                 return defer.promise;
             }
         }

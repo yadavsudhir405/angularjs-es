@@ -1,11 +1,57 @@
 @import url(../../../node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import url(~codemirror/lib/codemirror.css);
 .demo-header {
+  color: #8000ff; }
+
+.demo-formula {
+  margin-left: 10%;
+  width: 25%;
+  height: 10%; }
+
+section.experiment-selectors p:first-child {
   color: red; }
+
+section.experiment-selectors > p:nth-child(3) {
+  color: #00cc00; }
+
+section.experiment-selectors > p:nth-last-child(3) {
+  font-weight: bold; }
+
+section.experiment-selectors > p.test::first-letter {
+  font-weight: bolder;
+  font-size: 159%; }
+
+button:hover {
+  background: #5540bf;
+  color: aliceblue; }
+
+::selection {
+  color: red;
+  background: yellow; }
 
 .login {
   color: cornflowerblue; }
 
 .myclass {
   display: none; }
+
+footer {
+  background: black;
+  color: #aed4ef;
+  text-align: center;
+  height: 3em;
+  padding: 0.5em;
+  width: 100%;
+  position: fixed;
+  margin-top: 0.5em; }
+
+section > header {
+  text-align: center; }
+
+body {
+  overflow: scroll; }
+
+main * {
+  margin-left: 0.5em; }
 
 /*# sourceMappingURL=style.css.map */

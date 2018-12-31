@@ -1,3 +1,32 @@
 .demo-header{
-  color: red;
+  color: hsl(270,100%,50%)
+}
+.demo-formula{
+  margin-left: 10%;
+  width: 25%;
+  height: 10%;
+}
+section.experiment-selectors p:first-child {
+  color: hsl(0,100%,50%)
+}
+
+section.experiment-selectors > p:nth-child(3){
+  color: hsl(120,100%, 40%)
+}
+
+section.experiment-selectors > p:nth-last-child(3){
+  font-weight: bold;
+}
+section.experiment-selectors > p.test::first-letter{
+  font-weight: bolder;
+  font-size: 159%;
+}
+button:hover{
+  background: hsl(250,50%,50%);
+  color: aliceblue;
+}
+
+::selection{
+  color: hsl(0,100%,50%);
+  background: hsl(60,100%,50%);
 }

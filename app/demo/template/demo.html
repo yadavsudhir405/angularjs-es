@@ -1,11 +1,36 @@
-<div class="demo-header">
-    This is the demo page Header with message {{demoCtrl.message}}
-</div>
-<img src="/app/assets/images/webpack-es6.png" alt="webpack">
-<a href="/home" > Home</a>
-<a href="/login" > Login</a>
-<img src="/app/assets/images/demo/angular.png">
-<div ng-if="demoCtrl.show">
-    {{demoCtrl.text}}
-</div>
-<button ng-click="demoCtrl.handleClick()"> GO</button>
+<section class="demo-header">
+    <header>
+        <h3>This is the demo page Header with message {{demoCtrl.message}}</h3>
+    </header>
+    <p>
+        Demo para contents goes here
+    </p>
+</section>
+<section ng-hide="true" id="#image-trial">
+    <img src="/app/assets/images/webpack-es6.png" alt="webpack">
+    <a href="/home" > Home</a>
+    <a href="/login" > Login</a>
+    <img src="/app/assets/images/demo/angular.png">
+</section>
+<section ng-hide="true" id="code-editor">
+    <code-Mirror-Formula ng-model="demo.formula">{{demo.formula}}</code-Mirror-Formula>
+</section>
+<section class="experiment-selectors">
+    <p>Welcome to San Jaquin Velly Town.</p>
+    <header>
+        <h2>Html Townhall session:</h2>
+    </header>
+
+    <p>We have fascinating speakers for you this season!</p>
+    <ul>
+        <li><a href="http://facebook.com"> Jeffery Toobin</a></li>
+        <li><a href="http://youtube.com"> Andrew Rose Soakin</a></li>
+        <li><a href="/login"> Amy Chua</a></li>
+    </ul>
+    <h3> Post-lecturer session</h3>
+    <p class="test">Extended the excitement session by ABC</p>
+    <p>Limited seats are available </p>
+    <p><em>Contact us by phone </em> at (599) 555-122</p>
+    <button ng-click="demoCtrl.handleClick()" class="login"> Login</button><br>
+
+</section>

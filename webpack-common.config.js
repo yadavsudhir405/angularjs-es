@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const devMode = process.env.NODE_ENV !== "production";
 
 const entries = {
@@ -70,11 +71,19 @@ const rules = [
 ];
 
 const commonPlugins = [
+    new CopyWebpackPlugin(
+        [{
+            from: "app",
+            test: /.ico$/,
+            ignore:['*.js','*.scss','*.css','*.jpg','*.png','*.html','*.json','*.md','*.txt','*.map']
+        }]
+    ),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new HtmlWebpackPlugin({
         minify: false,
+        favicon:'./app/favicon.ico',
         template: path.join(__dirname, 'app/index.html'),
         inject: 'body',
         hash: false
