@@ -29,6 +29,27 @@ button:hover {
   color: red;
   background: yellow; }
 
+.red-block, .green-block, .blue-block, .yellow-block {
+  width: 5em;
+  height: 5em; }
+
+.red-block {
+  background: red;
+  float: left; }
+
+.green-block {
+  float: left;
+  background: green; }
+
+.blue-block {
+  float: left;
+  clear: left;
+  background: blue; }
+
+.yellow-block {
+  float: left;
+  background: yellow; }
+
 .login {
   color: cornflowerblue; }
 
@@ -42,14 +63,17 @@ footer {
   height: 3em;
   padding: 0.5em;
   width: 100%;
-  position: fixed;
-  margin-top: 0.5em; }
+  position: static;
+  bottom: 0;
+  margin-top: 0.5em;
+  clear: left; }
 
 section > header {
   text-align: center; }
 
 body {
-  overflow: scroll; }
+  overflow: scroll;
+  position: relative; }
 
 main * {
   margin-left: 0.5em; }

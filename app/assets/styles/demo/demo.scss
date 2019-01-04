@@ -30,3 +30,27 @@ button:hover{
   color: hsl(0,100%,50%);
   background: hsl(60,100%,50%);
 }
+.red-block, .green-block, .blue-block, .yellow-block{
+  width: 5em;
+  height: 5em;
+}
+.red-block{
+  background: red;
+  float: left;
+}
+.green-block{
+  float: left;
+
+  background: green;
+}
+.blue-block{
+  float: left;
+clear: left;
+  background: blue;
+}
+.yellow-block{
+  float:left;
+
+  background: yellow;
+}
+
