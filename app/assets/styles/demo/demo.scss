@@ -33,6 +33,7 @@ button:hover{
 .red-block, .green-block, .blue-block, .yellow-block{
   width: 5em;
   height: 5em;
+  margin: 1em;
 }
 .red-block{
   background: red;
@@ -45,7 +46,7 @@ button:hover{
 }
 .blue-block{
   float: left;
-clear: left;
+ clear: left;
   background: blue;
 }
 .yellow-block{

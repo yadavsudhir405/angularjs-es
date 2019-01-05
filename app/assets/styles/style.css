@@ -31,7 +31,8 @@ button:hover {
 
 .red-block, .green-block, .blue-block, .yellow-block {
   width: 5em;
-  height: 5em; }
+  height: 5em;
+  margin: 1em; }
 
 .red-block {
   background: red;
@@ -56,6 +57,71 @@ button:hover {
 .myclass {
   display: none; }
 
+* {
+  margin: 0; }
+
+body {
+  overflow: scroll;
+  position: relative;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: white; }
+
+main * {
+  margin-left: 0.5em; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none;
+  color: #000099; }
+
+#header-nav-bar {
+  background: black;
+  width: 100%;
+  height: 5em;
+  position: sticky; }
+
+#header-nav-bar a {
+  color: white; }
+
+#logo, #nav-link-section, #search-section {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  height: 5em;
+  border: thin black; }
+
+#logo {
+  width: 10%;
+  padding-top: 1.5em; }
+
+#logo:hover {
+  background-color: #bf4040; }
+
+#nav-link-section {
+  width: 80%; }
+
+#search-section {
+  width: 10%; }
+
+.flex-container {
+  display: flex; }
+
+#nav-link-section > div.flex-container > div {
+  width: 25%;
+  height: 5em;
+  margin: 0;
+  padding-top: 1.5em; }
+
+#nav-link-section > div.flex-container > div:hover {
+  background-color: #bf4040; }
+
+#search-section {
+  padding-top: 1.5em; }
+
 footer {
   background: black;
   color: #aed4ef;
@@ -67,15 +133,5 @@ footer {
   bottom: 0;
   margin-top: 0.5em;
   clear: left; }
-
-section > header {
-  text-align: center; }
-
-body {
-  overflow: scroll;
-  position: relative; }
-
-main * {
-  margin-left: 0.5em; }
 
 /*# sourceMappingURL=style.css.map */
