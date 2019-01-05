@@ -1,57 +1,11 @@
-.demo-header{
-  color: hsl(270,100%,50%)
+.speaker-details{
+  margin-top: 1em;
 }
-.demo-formula{
-  margin-left: 10%;
-  width: 25%;
-  height: 10%;
+.speakers>div.speaker-details:nth-child(2) a {
+  text-decoration: underline;
+  display: block;
 }
-section.experiment-selectors p:first-child {
-  color: hsl(0,100%,50%)
+.speakers>div.speaker-details:nth-child(2) img {
+  width: 20rem;
+  height: 10rem;
 }
-
-section.experiment-selectors > p:nth-child(3){
-  color: hsl(120,100%, 40%)
-}
-
-section.experiment-selectors > p:nth-last-child(3){
-  font-weight: bold;
-}
-section.experiment-selectors > p.test::first-letter{
-  font-weight: bolder;
-  font-size: 159%;
-}
-button:hover{
-  background: hsl(250,50%,50%);
-  color: aliceblue;
-}
-
-::selection{
-  color: hsl(0,100%,50%);
-  background: hsl(60,100%,50%);
-}
-.red-block, .green-block, .blue-block, .yellow-block{
-  width: 5em;
-  height: 5em;
-  margin: 1em;
-}
-.red-block{
-  background: red;
-  float: left;
-}
-.green-block{
-  float: left;
-
-  background: green;
-}
-.blue-block{
-  float: left;
- clear: left;
-  background: blue;
-}
-.yellow-block{
-  float:left;
-
-  background: yellow;
-}
-

@@ -1,3 +1,4 @@
+@import "../../../node_modules/normalize.css";
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "~codemirror/lib/codemirror.css";
 @import "demo/demo";
@@ -6,9 +7,13 @@
 $on-hover-color: hsl(240, 100%, 30%);
 $header-elements-padding: 1.5em;
 $hover-header-nav-link-color: hsl(0,50%,50%);
-*{
-  margin: 0;
+html {
+  font-size: 100%;
 }
+h1,h2,h3,h4,h5 {
+  scroll-snap-margin-block-start: 0;
+}
+
 
 body {
   overflow: scroll;
@@ -16,11 +21,12 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  color: hsl(0, 100%, 100%)
+  color: black;
 }
 
-main * {
-  margin-left: 0.5em;
+main {
+  margin-left: 1em;
+  font-size: 1rem;
 }
 
 a {

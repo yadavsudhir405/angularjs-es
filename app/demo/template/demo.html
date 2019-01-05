@@ -1,45 +1,33 @@
-<section class="demo-header">
+<section class="mission">
     <header>
-        <h3>This is the demo page Header with message {{demoCtrl.message}}</h3>
+        <h4> Our Mission</h4>
     </header>
     <p>
-        Demo para contents goes here
+        San  Jaqline valley Town Halt is <em>non-profit</em> Organization that is run by all-volunteer board of directors. Our mission is to bring nationally and internationlly
+        renowed, through-provoking speakers  who inform , educate, and entertain our audience!.
     </p>
 </section>
-<section ng-hide="true" id="#image-trial">
-    <img src="/app/assets/images/webpack-es6.png" alt="webpack">
-    <a href="/home" > Home</a>
-    <a href="/login" > Login</a>
-    <img src="/app/assets/images/demo/angular.png">
-</section>
-<section ng-hide="true" id="code-editor">
-    <code-Mirror-Formula ng-model="demo.formula">{{demo.formula}}</code-Mirror-Formula>
-</section>
-<section class="experiment-selectors">
-    <p>Welcome to San Jaquin Velly Town.</p>
+<section class="ticket-packages">
     <header>
-        <h2>Html Townhall session:</h2>
+        <h4>Our Ticket Packages</h4>
     </header>
-
-    <p>We have fascinating speakers for you this season!</p>
     <ul>
-        <li><a href="http://facebook.com"> Jeffery Toobin</a></li>
-        <li><a href="http://youtube.com"> Andrew Rose Soakin</a></li>
-        <li><a href="/login"> Amy Chua</a></li>
+        <li>Season Package: &dollar;95</li>
+        <li>Parton Package: &dollar;95</li>
+        <li>Single  Package: &dollar;95</li>
+        <li>Family Package: &dollar;95</li>
     </ul>
-    <h3> Post-lecturer session</h3>
-    <p class="test">Extended the excitement session by ABC</p>
-    <p>Limited seats are available </p>
-    <p><em>Contact us by phone </em> at (599) 555-122</p>
-    <button ng-click="demoCtrl.handleClick()" class="login"> Login</button><br>
-    <div class="red-block">
+</section>
+<section class="speakers">
+    <header>
+        <h4>This season's speakers:</h4>
+    </header>
+    <div class="speaker-details">
+        <div class="speaker-detail" ng-repeat="speaker in demoCtrl.speakersCount">
+            <h5>{{speaker.month}}</h5>
+            <a href="#">{{speaker.name}}</a>
+            <img  src="{{speaker.img}}" alt="{{speaker.name}}"/>
+        </div>
 
     </div>
-    <div class="green-block">
-    </div>
-    <div class="blue-block">
-    </div>
-    <div class="yellow-block">
-    </div>
-
 </section>

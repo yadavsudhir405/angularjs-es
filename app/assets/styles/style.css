@@ -1,55 +1,16 @@
+@import url(../../../node_modules/normalize.css);
 @import url(../../../node_modules/bootstrap/dist/css/bootstrap.min.css);
 @import url(~codemirror/lib/codemirror.css);
-.demo-header {
-  color: #8000ff; }
+.speaker-details {
+  margin-top: 1em; }
 
-.demo-formula {
-  margin-left: 10%;
-  width: 25%;
-  height: 10%; }
+.speakers > div.speaker-details:nth-child(2) a {
+  text-decoration: underline;
+  display: block; }
 
-section.experiment-selectors p:first-child {
-  color: red; }
-
-section.experiment-selectors > p:nth-child(3) {
-  color: #00cc00; }
-
-section.experiment-selectors > p:nth-last-child(3) {
-  font-weight: bold; }
-
-section.experiment-selectors > p.test::first-letter {
-  font-weight: bolder;
-  font-size: 159%; }
-
-button:hover {
-  background: #5540bf;
-  color: aliceblue; }
-
-::selection {
-  color: red;
-  background: yellow; }
-
-.red-block, .green-block, .blue-block, .yellow-block {
-  width: 5em;
-  height: 5em;
-  margin: 1em; }
-
-.red-block {
-  background: red;
-  float: left; }
-
-.green-block {
-  float: left;
-  background: green; }
-
-.blue-block {
-  float: left;
-  clear: left;
-  background: blue; }
-
-.yellow-block {
-  float: left;
-  background: yellow; }
+.speakers > div.speaker-details:nth-child(2) img {
+  width: 20rem;
+  height: 10rem; }
 
 .login {
   color: cornflowerblue; }
@@ -57,8 +18,11 @@ button:hover {
 .myclass {
   display: none; }
 
-* {
-  margin: 0; }
+html {
+  font-size: 100%; }
+
+h1, h2, h3, h4, h5 {
+  scroll-snap-margin-block-start: 0; }
 
 body {
   overflow: scroll;
@@ -66,10 +30,11 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  color: white; }
+  color: black; }
 
-main * {
-  margin-left: 0.5em; }
+main {
+  margin-left: 1em;
+  font-size: 1rem; }
 
 a {
   text-decoration: none; }
