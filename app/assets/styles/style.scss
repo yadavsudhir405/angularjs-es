@@ -6,8 +6,9 @@
 
 $on-hover-color: hsl(240, 100%, 30%);
 $header-elements-padding: 1.5em;
-$hover-header-nav-link-color: hsl(0,50%,50%);
+$hover-header-nav-link-color: hsl(0,50%,30%);
 $header-height: 5rem;
+$header-footer-background-liner-gradient-style: linear-gradient(90deg, hsl(20,80%,50%),hsl(20,100%,40%),hsl(0,50%,50%));
 
 html {
   font-size: 100%;
@@ -58,7 +59,7 @@ a:hover {
 }
 
 #header-nav-bar {
-  background: hsl(0, 100%, 0%);
+  background-image: $header-footer-background-liner-gradient-style;
   width: 100%;
   font-size: 1.2rem;
   height: $header-height;
@@ -113,7 +114,7 @@ header, footer {
   margin: 0.04rem 0;
 }
 footer {
-  background: black;
+  background-image: $header-footer-background-liner-gradient-style;
   color: hsl(205, 67%, 81%);
   text-align: center;
   height: 3em;

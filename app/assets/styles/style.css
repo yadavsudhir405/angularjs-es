@@ -15,7 +15,7 @@ section.ticket-packages > ul:last-child > li {
   background-image: linear-gradient(45deg, #40bf40, #a65959); }
 
 section.ticket-packages > ul:last-child > li:hover {
-  background-image: linear-gradient(45deg, #633636, white, #bf4040, white, #cc6666); }
+  background-image: repeating-linear-gradient(45deg, #e65e1a, #cc4400, #bf4040); }
 
 section.ticket-packages > ul:last-child > li:first-child {
   margin-top: 1rem; }
@@ -79,7 +79,7 @@ a:hover {
   color: #000099; }
 
 #header-nav-bar {
-  background: black;
+  background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
   width: 100%;
   font-size: 1.2rem;
   height: 5rem;
@@ -99,7 +99,7 @@ a:hover {
   padding-top: 1.5em; }
 
 #logo:hover {
-  background-color: #bf4040; }
+  background-color: #732626; }
 
 #nav-link-section {
   width: 75%; }
@@ -117,7 +117,7 @@ a:hover {
   padding-top: 1.5em; }
 
 #nav-link-section > div.flex-container > div:hover {
-  background-color: #bf4040; }
+  background-color: #732626; }
 
 #search-section {
   padding-top: 1.5em; }
@@ -127,7 +127,7 @@ header, footer {
   margin: 0.04rem 0; }
 
 footer {
-  background: black;
+  background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
   color: #aed4ef;
   text-align: center;
   height: 3em;
