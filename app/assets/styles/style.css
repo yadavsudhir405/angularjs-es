@@ -83,7 +83,8 @@ a:hover {
   width: 100%;
   font-size: 1.2rem;
   height: 5rem;
-  position: sticky; }
+  position: sticky;
+  border-radius: 0.3rem; }
 
 #header-nav-bar a {
   color: white; }
@@ -135,6 +136,7 @@ footer {
   position: static;
   bottom: 0;
   margin-top: 0.5em;
-  clear: left; }
+  clear: left;
+  border-radius: 0.5rem; }
 
 /*# sourceMappingURL=style.css.map */
