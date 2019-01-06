@@ -7,28 +7,41 @@
 $on-hover-color: hsl(240, 100%, 30%);
 $header-elements-padding: 1.5em;
 $hover-header-nav-link-color: hsl(0,50%,50%);
+$header-height: 5rem;
+
 html {
   font-size: 100%;
 }
-h1,h2,h3,h4,h5 {
-  scroll-snap-margin-block-start: 0;
+* {
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,p {
+  margin: 0;
+  padding: 0;
 }
 
-
 body {
-  overflow: scroll;
-  position: relative;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Verdana,Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 1rem;
+  overflow: scroll;
+  position: relative;
   color: black;
 }
 
 main {
-  margin-left: 1em;
   font-size: 1rem;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+main p {
+  padding: 0.25em ;
+}
+section {
+  margin: 0.5rem;
+}
 a {
   text-decoration: none;
 }
@@ -41,7 +54,8 @@ a:hover {
 #header-nav-bar {
   background: hsl(0, 100%, 0%);
   width: 100%;
-  height: 5em;
+  font-size: 1.2rem;
+  height: $header-height;
   position: sticky;
 }
 
@@ -51,9 +65,8 @@ a:hover {
 
 #logo, #nav-link-section, #search-section {
   font-weight: bold;
-  font-size: 1em;
   text-align: center;
-  height: 5em;
+  height: $header-height;
   border: thin black;
 }
 
@@ -65,11 +78,11 @@ a:hover {
   background-color: $hover-header-nav-link-color;
 }
 #nav-link-section {
-  width: 80%;
+  width:75%;
 }
 
 #search-section {
-  width: 10%;
+  width: 15%;
 }
 
 .flex-container {
@@ -78,7 +91,7 @@ a:hover {
 
 #nav-link-section > div.flex-container > div {
   width: 25%;
-  height: 5em;
+  height: $header-height;
   margin: 0;
   padding-top: $header-elements-padding;
 }
@@ -89,13 +102,16 @@ a:hover {
 #search-section {
   padding-top: $header-elements-padding;
 }
+header, footer {
+  width: 100%;
+  margin: 0.04rem 0;
+}
 footer {
   background: black;
   color: hsl(205, 67%, 81%);
   text-align: center;
   height: 3em;
   padding: 0.5em;
-  width: 100%;
   position: static;
   bottom: 0;
   margin-top: 0.5em;
