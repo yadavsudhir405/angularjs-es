@@ -21,6 +21,7 @@ h1,h2,h3,h4,h5,p {
 }
 
 body {
+  background-image: linear-gradient(white,hsl(256,20%,90%));
   font-family: Verdana,Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -28,6 +29,11 @@ body {
   overflow: scroll;
   position: relative;
   color: black;
+  width: 90%;
+  margin: 2rem 5rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid black;
+  box-shadow: 0.2rem 0.2rem hsl(300,50%,20%);
 }
 
 main {
