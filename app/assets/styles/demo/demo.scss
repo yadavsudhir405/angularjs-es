@@ -12,7 +12,7 @@ section.ticket-packages > ul:last-child > li {
   background-image: linear-gradient(45deg, hsl(120,50%,50%), hsl(0,30%,50%));
 }
 section.ticket-packages > ul:last-child > li:hover{
-  background-image: linear-gradient(45deg,hsl(0,10%,50%),red);
+  background-image: linear-gradient(45deg,hsl(0,30%,30%),white,hsl(0,50%,50%),white,hsl(0,50%,60%));
 }
 section.ticket-packages> ul:last-child > li:first-child {
   margin-top: 1rem;
