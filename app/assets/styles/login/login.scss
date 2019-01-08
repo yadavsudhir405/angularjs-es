@@ -5,9 +5,20 @@
 .aside {
   width: 40%;
   float: right;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  background: hsl(10, 50%, 90%);
 }
-section.main-content > article:first-child > img{
-    width: 55rem;
-    height: 50rem;
-    margin: 1rem 0;
+
+section.main-content > article:first-child > img {
+  margin: 1rem 0;
+  height: 30rem;
+  width: 30rem;
+}
+
+.main-content > article:first-child {
+  column-count: 2;
+  column-gap: 1.5rem;
+  column-span: all;
 }
