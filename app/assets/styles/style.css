@@ -28,11 +28,17 @@ section.ticket-packages > ul:last-child > li:first-child {
   width: 20rem;
   height: 10rem; }
 
-.login {
-  color: cornflowerblue; }
+.main-content {
+  width: 60%; }
 
-.myclass {
-  display: none; }
+.aside {
+  width: 40%;
+  float: right; }
+
+section.main-content > article:first-child > img {
+  width: 55rem;
+  height: 50rem;
+  margin: 1rem 0; }
 
 html {
   font-size: 100%; }
@@ -45,7 +51,7 @@ h1, h2, h3, h4, h5, p {
   padding: 0; }
 
 body {
-  background-image: linear-gradient(white, #f1baa7, white);
+  background-image: linear-gradient(0deg, #f1baa7, white);
   font-family: Verdana,Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;

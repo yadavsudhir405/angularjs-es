@@ -1,4 +1,13 @@
-.login {
-  color: cornflowerblue;
+.main-content {
+  width: 60%;
 }
-.myclass { display: none }
+
+.aside {
+  width: 40%;
+  float: right;
+}
+section.main-content > article:first-child > img{
+    width: 55rem;
+    height: 50rem;
+    margin: 1rem 0;
+}
