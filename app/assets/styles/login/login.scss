@@ -5,9 +5,14 @@
 .aside {
   width: 40%;
   float: right;
-  padding-left: 3rem;
+}
+.aside > nav:nth-child(2) {
+  width: 65% ;
+  padding-left: 1rem;
   padding-top: 1rem;
-  padding-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   background: hsl(10, 50%, 90%);
 }
 
