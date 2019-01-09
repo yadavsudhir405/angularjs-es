@@ -15,6 +15,23 @@
   padding-bottom: 1rem;
   background: hsl(10, 50%, 90%);
 }
+section > header:first-child > h3:first-child {
+  padding-bottom: 0.5rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background: black;
+  padding: 1rem;
+}
+.grid-container > div {
+  background: hsl(0,50%,50%);
+  padding: 5rem;
+  border: 0.2rem hsl(0,50%,100%) solid;
+}
+.grid-container > div:hover {
+  background: hsl(0,50%,70%);
+}
 
 section.main-content > article:first-child > img {
   margin: 1rem 0;
