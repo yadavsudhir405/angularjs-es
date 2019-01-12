@@ -77,6 +77,7 @@ div#nav-link-section > div.menu-links:first-child ul ul>li:hover ul{
 }
 div#nav-link-section > div.menu-links:first-child > ul li {
   float: left;
+  position: relative;
 }
 div#nav-link-section > div.menu-links:first-child  ul ul li{
   float: none;
@@ -98,7 +99,7 @@ div#nav-link-section{
 div#nav-link-section > div.menu-links:first-child li>a:first-child {
   display: block;
   text-align: center;
-  padding-top: $header-height/2;
+  padding-top: $header-height/2.5;
   margin-top: 0;
   padding-bottom: 0;
   width: 18rem;
