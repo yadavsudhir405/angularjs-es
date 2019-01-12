@@ -5,7 +5,7 @@ $hover-header-nav-link-color: hsl(0,50%,30%);
 #header-nav-bar {
   background-image: $header-footer-background-liner-gradient-style;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   height: $header-height;
   position: sticky;
   border-radius: 0.3rem;
@@ -24,7 +24,7 @@ $hover-header-nav-link-color: hsl(0,50%,30%);
 
 #logo {
   width: 10%;
-  padding-top: $header-elements-padding;
+  padding-top: $header-height - 2rem;
 }
 #logo:hover {
   background-color: $hover-header-nav-link-color;
@@ -67,9 +67,10 @@ div#nav-link-section > div.menu-links:first-child li {
 div#nav-link-section > div.menu-links:first-child li a {
   display: block;
   text-align: center;
-  padding-top: 1.5em;
+  padding-top: $header-height - 2rem;
   margin-right: 1rem;
   margin-top: 0;
+  padding-bottom: 0;
   width: 18rem;
   height: $header-height;
 }
