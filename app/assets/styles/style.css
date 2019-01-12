@@ -1,202 +1,72 @@
-@import url(../../../node_modules/normalize.css);
-@import url(../../../node_modules/bootstrap/dist/css/bootstrap.min.css);
-@import url(~codemirror/lib/codemirror.css);
-#header-nav-bar {
-  background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
-  width: 100%;
-  font-size: 1rem;
-  height: 5rem;
-  position: sticky;
-  border-radius: 0.3rem; }
+/*
+Error: Undefined variable: "$header-".
+        on line 90 of header/AppHeader.scss
+        from line 4 of style.scss
 
-#header-nav-bar a {
-  color: white; }
-
-#logo, #nav-link-section, #search-section {
-  font-weight: bold;
-  text-align: center;
-  height: 5rem;
-  border: thin black; }
-
-#logo {
-  width: 10%;
-  padding-top: 3rem; }
-
-#logo:hover {
-  background-color: #732626; }
-
-#nav-link-section {
-  width: 75%; }
-
-#search-section {
-  width: 15%; }
-
-.flex-container {
-  display: flex; }
-
-#nav-link-section > div.flex-container > div {
-  width: 25%;
-  height: 5rem;
-  margin: 0;
-  padding-top: 1.5em; }
-
-#nav-link-section > div.flex-container > div:hover {
-  background-color: #732626; }
-
-#search-section {
-  padding-top: 1.5em; }
-
-div#nav-link-section > div.menu-links:first-child ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-div#nav-link-section > div.menu-links:first-child li {
-  float: left; }
-
-div#nav-link-section > div.menu-links:first-child li a {
-  display: block;
-  text-align: center;
-  padding-top: 3rem;
-  margin-right: 1rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  width: 18rem;
-  height: 5rem; }
-
-div#nav-link-section > div.menu-links:first-child li a.last-item {
-  margin-right: 0; }
-
-div#nav-link-section > div.menu-links:first-child li a:hover {
-  background: #732626; }
-
-.speaker-details {
-  margin-top: 1em; }
-
-section.ticket-packages > ul:last-child {
-  list-style: none; }
-
-section.ticket-packages > ul:last-child > li {
-  width: 12%;
-  padding: 0.5rem;
-  margin-bottom: 0.2rem;
-  border-radius: 1rem 0.2rem 1rem 0.2rem;
-  background-image: linear-gradient(45deg, #40bf40, #a65959); }
-
-section.ticket-packages > ul:last-child > li:hover {
-  background-image: repeating-linear-gradient(45deg, #e65e1a, #cc4400, #bf4040); }
-
-section.ticket-packages > ul:last-child > li:first-child {
-  margin-top: 1rem; }
-
-.speakers > div.speaker-details:nth-child(2) a {
-  text-decoration: underline;
-  display: block; }
-
-.speakers > div.speaker-details:nth-child(2) img {
-  width: 20rem;
-  height: 10rem; }
-
-.grid-layout {
-  display: grid;
-  grid-template-columns: 60% 40%; }
-
-.grid-layout > section.main-content, .grid-layout > section.aside {
-  padding-right: 0; }
-
-.aside > nav:nth-child(2) {
-  width: 65%;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  background: #f2ddd9; }
-
-section > header:first-child > h3:first-child {
-  padding-bottom: 0.5rem; }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background: black;
-  padding: 1rem; }
-
-.grid-container > div {
-  background: #bf4040;
-  padding: 4rem;
-  border: 0.2rem white solid; }
-
-.grid-container > div:hover {
-  background: #d98c8c; }
-
-section.main-content > article:first-child > img {
-  height: 30rem;
-  width: 30rem; }
-
-.main-content > article:first-child {
-  column-count: 2;
-  column-gap: 1.5rem;
-  column-span: all; }
-
-html {
-  font-size: 100%; }
-
-* {
-  box-sizing: border-box; }
-
-h1, h2, h3, h4, h5, p {
-  margin: 0;
-  padding: 0; }
-
-body {
-  background-image: linear-gradient(0deg, #f1baa7, white);
-  font-family: Verdana,Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1rem;
-  overflow: scroll;
-  position: relative;
-  color: black;
-  width: 90%;
-  margin: 2rem 5rem;
-  border-radius: 0.5rem;
-  border: 0.2rem solid black;
-  box-shadow: 0.2rem 0.2rem #4d1a4d; }
-
-main {
-  font-size: 1rem;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto; }
-
-main p {
-  padding: 0.25em; }
-
-section {
-  margin: 0.5rem; }
-
-a {
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: none;
-  color: #000099; }
-
-header, footer {
-  width: 100%;
-  margin: 0.04rem 0; }
-
-footer {
-  background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
-  color: #aed4ef;
-  text-align: center;
-  height: 5em;
-  padding: 1em;
-  position: static;
-  bottom: 0;
-  margin-top: 0.5em;
-  clear: left;
-  border-radius: 0.5rem; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+header/AppHeader.scss:90
+style.scss:4
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+org/jruby/RubyArray.java:2492:in `map'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+org/jruby/RubyArray.java:2492:in `map'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:88:in `block in with_import'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:88:in `with_import'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+org/jruby/RubyArray.java:2492:in `map'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/lib/ruby/gems/shared/gems/sass-3.5.3/bin/scss:13:in `<main>'
+org/jruby/RubyKernel.java:977:in `load'
+/Users/sudhiry/.rbenv/versions/jruby-9.1.6.0/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$header-\".\A         on line 90 of header/AppHeader.scss\A         from line 4 of style.scss"; }
