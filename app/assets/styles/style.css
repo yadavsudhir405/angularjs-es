@@ -1,6 +1,51 @@
 @import url(../../../node_modules/normalize.css);
 @import url(../../../node_modules/bootstrap/dist/css/bootstrap.min.css);
 @import url(~codemirror/lib/codemirror.css);
+#header-nav-bar {
+  background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
+  width: 100%;
+  font-size: 1.2rem;
+  height: 5rem;
+  position: sticky;
+  border-radius: 0.3rem; }
+
+#header-nav-bar a {
+  color: white; }
+
+#logo, #nav-link-section, #search-section {
+  font-weight: bold;
+  text-align: center;
+  height: 5rem;
+  border: thin black; }
+
+#logo {
+  width: 10%;
+  padding-top: 1.5em; }
+
+#logo:hover {
+  background-color: #732626; }
+
+#nav-link-section {
+  width: 75%; }
+
+#search-section {
+  width: 15%; }
+
+.flex-container {
+  display: flex; }
+
+#nav-link-section > div.flex-container > div {
+  width: 25%;
+  height: 5rem;
+  margin: 0;
+  padding-top: 1.5em; }
+
+#nav-link-section > div.flex-container > div:hover {
+  background-color: #732626; }
+
+#search-section {
+  padding-top: 1.5em; }
+
 .speaker-details {
   margin-top: 1em; }
 
@@ -114,51 +159,6 @@ a:hover {
   text-decoration: none;
   color: #000099; }
 
-#header-nav-bar {
-  background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
-  width: 100%;
-  font-size: 1.2rem;
-  height: 5rem;
-  position: sticky;
-  border-radius: 0.3rem; }
-
-#header-nav-bar a {
-  color: white; }
-
-#logo, #nav-link-section, #search-section {
-  font-weight: bold;
-  text-align: center;
-  height: 5rem;
-  border: thin black; }
-
-#logo {
-  width: 10%;
-  padding-top: 1.5em; }
-
-#logo:hover {
-  background-color: #732626; }
-
-#nav-link-section {
-  width: 75%; }
-
-#search-section {
-  width: 15%; }
-
-.flex-container {
-  display: flex; }
-
-#nav-link-section > div.flex-container > div {
-  width: 25%;
-  height: 5rem;
-  margin: 0;
-  padding-top: 1.5em; }
-
-#nav-link-section > div.flex-container > div:hover {
-  background-color: #732626; }
-
-#search-section {
-  padding-top: 1.5em; }
-
 header, footer {
   width: 100%;
   margin: 0.04rem 0; }
@@ -167,8 +167,8 @@ footer {
   background-image: linear-gradient(90deg, #e65e1a, #cc4400, #bf4040);
   color: #aed4ef;
   text-align: center;
-  height: 3em;
-  padding: 0.5em;
+  height: 5em;
+  padding: 1em;
   position: static;
   bottom: 0;
   margin-top: 0.5em;

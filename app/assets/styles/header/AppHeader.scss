@@ -1,0 +1,56 @@
+$header-elements-padding: 1.5em;
+$header-height: 5rem;
+$header-footer-background-liner-gradient-style: linear-gradient(90deg, hsl(20,80%,50%),hsl(20,100%,40%),hsl(0,50%,50%));
+$hover-header-nav-link-color: hsl(0,50%,30%);
+#header-nav-bar {
+  background-image: $header-footer-background-liner-gradient-style;
+  width: 100%;
+  font-size: 1.2rem;
+  height: $header-height;
+  position: sticky;
+  border-radius: 0.3rem;
+}
+
+#header-nav-bar a {
+  color: hsl(0, 100%, 100%);
+}
+
+#logo, #nav-link-section, #search-section {
+  font-weight: bold;
+  text-align: center;
+  height: $header-height;
+  border: thin black;
+}
+
+#logo {
+  width: 10%;
+  padding-top: $header-elements-padding;
+}
+#logo:hover {
+  background-color: $hover-header-nav-link-color;
+}
+#nav-link-section {
+  width:75%;
+}
+
+#search-section {
+  width: 15%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#nav-link-section > div.flex-container > div {
+  width: 25%;
+  height: $header-height;
+  margin: 0;
+  padding-top: $header-elements-padding;
+}
+#nav-link-section > div.flex-container > div:hover{
+  background-color: $hover-header-nav-link-color;
+}
+
+#search-section {
+  padding-top: $header-elements-padding;
+}
