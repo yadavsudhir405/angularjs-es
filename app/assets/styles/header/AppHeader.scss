@@ -65,14 +65,25 @@ div#nav-link-section > div.menu-links:first-child ul ul {
   position: absolute;
   top:100%;
 }
+div#nav-link-section > div.menu-links:first-child ul ul ul {
+  display: none;
+  position: absolute;
+  top:0;
+  left: 100%;
+}
+
+div#nav-link-section > div.menu-links:first-child ul ul>li:hover ul{
+  display: block;
+}
 div#nav-link-section > div.menu-links:first-child > ul li {
   float: left;
 }
 div#nav-link-section > div.menu-links:first-child  ul ul li{
   float: none;
+  position: relative;
 }
 
-div#nav-link-section > div.menu-links:first-child  ul>li:hover ul {
+div#nav-link-section > div.menu-links:first-child  ul>li:hover>ul {
   display: block;
 
 }
@@ -88,7 +99,6 @@ div#nav-link-section > div.menu-links:first-child li>a:first-child {
   display: block;
   text-align: center;
   padding-top: $header-height/2;
-  margin-right: 1rem;
   margin-top: 0;
   padding-bottom: 0;
   width: 18rem;
