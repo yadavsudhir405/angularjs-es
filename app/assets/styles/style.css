@@ -46,6 +46,29 @@
 #search-section {
   padding-top: 1.5em; }
 
+div#nav-link-section > div.menu-links:first-child ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+div#nav-link-section > div.menu-links:first-child li {
+  float: left; }
+
+div#nav-link-section > div.menu-links:first-child li a {
+  display: block;
+  text-align: center;
+  padding-top: 1.5em;
+  margin-right: 1rem;
+  margin-top: 0;
+  width: 18rem;
+  height: 5rem; }
+
+div#nav-link-section > div.menu-links:first-child li a.last-item {
+  margin-right: 0; }
+
+div#nav-link-section > div.menu-links:first-child li a:hover {
+  background: #732626; }
+
 .speaker-details {
   margin-top: 1em; }
 
