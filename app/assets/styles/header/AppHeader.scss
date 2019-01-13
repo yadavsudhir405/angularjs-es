@@ -55,8 +55,33 @@ div#nav-link-section > div.menu-links:first-child  ul {
   margin: 0;
   padding: 0;
 }
-div#nav-link-section > div.menu-links li{
+
+div#nav-link-section > div.menu-links:first-child li {
+  display: block;
+  text-align: center;
+  padding-top: $header-height/2.5;
+  margin-top: 0;
+  padding-bottom: 0;
+  height: $header-height;
+  background-image: $header-footer-background-liner-gradient-style
+}
+
+div#nav-link-section > div.menu-links>ul>li{
   width: 25%;
+}
+div#nav-link-section > div.menu-links:first-child>ul>li>ul{
+  width: 100%;
+}
+div#nav-link-section >div.menu-links:first-child>ul>li>ul>li>ul{
+  width: 100%;
+}
+div#nav-link-section > div.menu-links:first-child li:hover{
+  background: $hover-header-nav-link-color;
+}
+div#nav-link-section > div.menu-links:first-child >ul>li{
+  background: none;
+  float: left;
+  position: relative;
 }
 div#nav-link-section > div.menu-links:first-child ul ul {
   display: none;
@@ -73,10 +98,7 @@ div#nav-link-section > div.menu-links:first-child ul ul ul {
 div#nav-link-section > div.menu-links:first-child ul ul>li:hover ul{
   display: block;
 }
-div#nav-link-section > div.menu-links:first-child > ul li {
-  float: left;
-  position: relative;
-}
+
 div#nav-link-section > div.menu-links:first-child  ul ul li{
   float: none;
   position: relative;
@@ -94,22 +116,3 @@ div#nav-link-section{
   }
 }
 
-div#nav-link-section > div.menu-links:first-child li>a:first-child {
-  display: block;
-  text-align: center;
-  padding-top: $header-height/2.5;
-  margin-top: 0;
-  padding-bottom: 0;
-  width: 100%;
-  height: $header-height;
-  background-image: $header-footer-background-liner-gradient-style
-}
-div#nav-link-section > div.menu-links:first-child>ul>li>a:first-child{
-  background-image: none;
-}
-div#nav-link-section > div.menu-links:first-child > ul >li {
- margin-right: 0;
-}
-div#nav-link-section > div.menu-links:first-child li a:hover{
-  background: $hover-header-nav-link-color;
-}
