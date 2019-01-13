@@ -1,14 +1,14 @@
 $header-elements-padding: 1.5em;
-$header-height: 5rem;
+$header-height: 5em;
 $header-footer-background-liner-gradient-style: linear-gradient(90deg, hsl(20,80%,50%),hsl(20,100%,40%),hsl(0,50%,50%));
 $hover-header-nav-link-color: hsl(0,50%,30%);
 #header-nav-bar {
   background-image: $header-footer-background-liner-gradient-style;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1em;
   height: $header-height;
   position: sticky;
-  border-radius: 0.3rem;
+  border-radius: 0.3em;
 }
 
 #header-nav-bar a {
@@ -24,7 +24,7 @@ $hover-header-nav-link-color: hsl(0,50%,30%);
 
 #logo {
   width: 10%;
-  padding-top: $header-height - 2rem;
+  padding-top: $header-height - 2em;
 }
 #logo:hover {
   background-color: $hover-header-nav-link-color;
@@ -41,12 +41,7 @@ $hover-header-nav-link-color: hsl(0,50%,30%);
   display: flex;
 }
 
-#nav-link-section > div.flex-container > div {
-  width: 25%;
-  height: $header-height;
-  margin: 0;
-  padding-top: $header-elements-padding;
-}
+
 #nav-link-section > div.flex-container > div:hover{
   background-color: $hover-header-nav-link-color;
 }
@@ -59,6 +54,9 @@ div#nav-link-section > div.menu-links:first-child  ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+div#nav-link-section > div.menu-links li{
+  width: 25%;
 }
 div#nav-link-section > div.menu-links:first-child ul ul {
   display: none;
@@ -102,7 +100,7 @@ div#nav-link-section > div.menu-links:first-child li>a:first-child {
   padding-top: $header-height/2.5;
   margin-top: 0;
   padding-bottom: 0;
-  width: 18rem;
+  width: 100%;
   height: $header-height;
   background-image: $header-footer-background-liner-gradient-style
 }

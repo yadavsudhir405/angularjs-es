@@ -7,8 +7,6 @@
 
 $on-hover-color: hsl(240, 100%, 30%);
 
-
-
 html {
   font-size: 100%;
 }
@@ -25,19 +23,19 @@ body {
   font-family: Verdana,Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1em;
   overflow: scroll;
   position: relative;
   color: black;
   width: 90%;
-  margin: 2rem 5rem;
-  border-radius: 0.5rem;
-  border: 0.2rem solid black;
-  box-shadow: 0.2rem 0.2rem hsl(300,50%,20%);
+  margin: 2em 5em;
+  border-radius: 0.5em;
+  border: 0.2em solid black;
+  box-shadow: 0.2em 0.2em hsl(300,50%,20%);
 }
 
 main {
-  font-size: 1rem;
+  font-size: 1em;
   width: 98%;
   margin-left: auto;
   margin-right: auto;
@@ -46,7 +44,7 @@ main p {
   padding: 0.25em ;
 }
 section {
-  margin: 0.5rem;
+  margin: 0.5em;
 }
 a {
   text-decoration: none;
@@ -58,7 +56,7 @@ a:hover {
 }
 header, footer {
   width: 100%;
-  margin: 0.04rem 0;
+  margin: 0.04em 0;
 }
 footer {
   background-image: $header-footer-background-liner-gradient-style;
@@ -70,5 +68,5 @@ footer {
   bottom: 0;
   margin-top: 0.5em;
   clear: left;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
 }
