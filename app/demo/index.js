@@ -2,6 +2,7 @@ import angular from "angular";
 import img1 from "../assets/images/demo/angular.png";
 import {default as demoController} from "./controller/DemoController";
 import {default as CodeMirrorFormula } from "./directive/codeMirrorFormulaDirective";
+//import {handleClick1} from "./controller/DemoController";
 
 const demoApp = angular.module('demo', []);
 

@@ -123,16 +123,24 @@ section.ticket-packages > ul:last-child > li:first-child {
   height: auto;
   max-width: 400px; }
 
-section#transition-demo > h3 {
-  font-size: 2em;
-  color: #000099;
-  cursor: pointer;
-  transition: font-size 3s ease-in 1s, color 3s ease-in 1s;
-  margin: 1em 1%; }
+section#accordion > a {
+  font-size: 1em;
+  display: block;
+  color: white;
+  background: black;
+  width: 30%;
+  padding: 1em 1%;
+  border-radius: 0.5em;
+  margin: 1em 0;
+  position: relative; }
 
-section#transition-demo > h3:hover {
-  font-size: 4em;
-  color: #bf4040; }
+section#accordion > div {
+  display: none;
+  transition: display 3s ease-in 2s; }
+
+section#accordion > a:hover + div {
+  display: block;
+  position: relative; }
 
 .grid-layout {
   display: grid;
