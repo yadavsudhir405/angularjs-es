@@ -131,16 +131,15 @@ section#accordion > a {
   width: 30%;
   padding: 1em 1%;
   border-radius: 0.5em;
-  margin: 1em 0;
-  position: relative; }
+  margin: 1em 0; }
 
 section#accordion > div {
-  display: none;
-  transition: display 3s ease-in 2s; }
+  height: 0;
+  overflow: hidden;
+  transition: height 5s ease-in-out 1s; }
 
-section#accordion > a:hover + div {
-  display: block;
-  position: relative; }
+section#accordion > a:tar + div {
+  height: auto; }
 
 .grid-layout {
   display: grid;
