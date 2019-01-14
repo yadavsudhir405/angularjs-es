@@ -26,7 +26,13 @@
         <div class="speaker-detail" ng-repeat="speaker in demoCtrl.speakersCount">
             <h5>{{speaker.month}}</h5>
             <a href="#">{{speaker.name}}</a>
-            <img  src="{{speaker.img}}" alt="{{speaker.name}}"/>
+            <img  src="{{speaker.img}}" alt="{{speaker.name}}" usemap="#webpack-angular-image-map"/>
+            <map name="webpack-angular-image-map">
+                <area href="https://webpack.js.org/" alt="Webpack" title="Webpack" shape="rect"
+                coords="10,10,20,20">
+                <area href="https://angular.io/" alt="Angular" title="Angular" shape="rect"
+                coords="40,10,60,20">
+            </map>
         </div>
 
     </div>
