@@ -163,8 +163,8 @@ section#animation-experiment {
 
 section#animation-experiment > div.status-container {
   width: 100%;
-  height: 42em;
-  border: 1em black solid; }
+  height: 40em;
+  border: 0.1em black solid; }
 
 section#animation-experiment > div.status-container > div.status {
   width: 30%;
@@ -191,10 +191,10 @@ section#animation-experiment > div.status-container > div.status:hover {
     background: red; }
   50% {
     margin-left: 70%;
-    margin-top: 30em;
+    margin-top: 29.8em;
     background: #000099; }
   75% {
-    margin-top: 30em;
+    margin-top: 29.8em;
     margin-left: 0; }
   100% {
     margin-top: 0;
