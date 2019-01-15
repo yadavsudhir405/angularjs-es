@@ -167,18 +167,35 @@ section#animation-experiment > div.status-container {
   border: 0.3em black solid; }
 
 section#animation-experiment > div.status-container > div.status {
-  width: 0;
   height: 3.4em;
-  background: #99cd32; }
+  background: #40bf40;
+  animation-name: fill-width;
+  animation-duration: 13s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running; }
 
-section#animation-experiment > div.status-container > div.status {
-  animation: fill-width 3s 2s infinite ease-in-out alternate; }
+section#animation-experiment > div.status-container > div.status:hover {
+  animation-play-state: paused; }
 
 @keyframes fill-width {
   from {
     width: 0; }
   to {
     width: 100%; } }
+@keyframes fill-gradient {
+  0% {
+    background-image: repeating-linear-gradient(9deg, red, #339900, white, blue); }
+  25% {
+    background-image: repeating-linear-gradient(9deg, red, #339900, blue, white); }
+  50% {
+    background-image: repeating-linear-gradient(9deg, red, white, #339900, blue); }
+  75% {
+    background-image: repeating-linear-gradient(9deg, white, red, #339900, blue); }
+  100% {
+    background-image: repeating-linear-gradient(9deg, blue, white, green, red); } }
 .grid-layout {
   display: grid;
   grid-template-columns: 60% 40%; }

@@ -76,19 +76,42 @@ section#animation-experiment > div.status-container{
   border: 0.3em black solid;
 }
 section#animation-experiment > div.status-container >div.status{
-  width: 0;
   height: 4em - 0.3em*2;
-  background: hsl(80,61%,50%);
+  background: #40bf40;
+  //background-image: repeating-linear-gradient(9deg,hsl(0,100%,50%) ,hsl(100,100%,30%) ,white ,blue );
+  animation-name: fill-width;
+  animation-duration: 13s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
 }
-
-section#animation-experiment > div.status-container > div.status{
-  animation: fill-width 3s 2s infinite ease-in-out alternate;
+section#animation-experiment > div.status-container >div.status:hover{
+  animation-play-state: paused;
 }
 @keyframes fill-width {
-  from {
-    width: 0;
+  from{
+   width: 0;
   }
   to {
-    width: 100%;
+   width: 100%;
+  }
+}
+@keyframes fill-gradient {
+  0% {
+    background-image: repeating-linear-gradient(9deg,hsl(0,100%,50%) ,hsl(100,100%,30%) ,white ,blue );
+  }
+  25% {
+    background-image: repeating-linear-gradient(9deg,hsl(0,100%,50%) ,hsl(100,100%,30%) ,blue ,white );
+  }
+  50% {
+    background-image: repeating-linear-gradient(9deg,hsl(0,100%,50%) ,white ,hsl(100,100%,30%) ,blue );
+  }
+  75% {
+    background-image: repeating-linear-gradient(9deg,white ,hsl(0,100%,50%) ,hsl(100,100%,30%) ,blue );
+  }
+  100% {
+    background-image: repeating-linear-gradient(9deg,blue,white ,green ,red );
   }
 }
