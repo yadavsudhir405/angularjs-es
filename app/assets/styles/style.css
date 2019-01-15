@@ -156,6 +156,29 @@ section#accordion > div {
 section#accordion > a:hover + div {
   height: auto; }
 
+section#animation-experiment {
+  width: 50%;
+  padding: 1em 1%;
+  float: right; }
+
+section#animation-experiment > div.status-container {
+  width: 100%;
+  height: 4em;
+  border: 0.3em black solid; }
+
+section#animation-experiment > div.status-container > div.status {
+  width: 0;
+  height: 3.4em;
+  background: #99cd32; }
+
+section#animation-experiment > div.status-container > div.status {
+  animation: fill-width 3s 2s infinite ease-in-out alternate; }
+
+@keyframes fill-width {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 .grid-layout {
   display: grid;
   grid-template-columns: 60% 40%; }
