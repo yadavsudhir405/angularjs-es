@@ -5,9 +5,11 @@ import {default as demoApp } from "./demo/index";
 import {default as loginModule} from "./login/index";
 import { default as headerModule } from "./header/index";
 import {default as unathorizedHandleModule } from "./unathorized/index";
+import {default as signupModule} from "./signup";
 
 import demoControllerTemplate from "./demo/template/demo.html";
 import loginControllerTemplate from "./login/template/Login.html";
+import signupTemplate from "./signup/signupTemplate.html";
 import unathorizedControllerTemplate from "./unathorized/template/unathorizedHandlerPage.html";
 
 import styles from "./assets/styles/style.scss";
@@ -18,7 +20,8 @@ let modules = [
     headerModule,
     unathorizedHandleModule,
     demoApp,
-    loginModule
+    loginModule,
+    signupModule
 ];
 
 const myApp = angular.module('myApp', modules);
@@ -31,7 +34,12 @@ myApp.config(function ($stateProvider,$locationProvider, $urlRouterProvider, $lo
         controller: 'DemoController',
         controllerAs: 'demoCtrl'
     });
-
+    $stateProvider.state('Signup',{
+        url: '/signup',
+        template: signupTemplate,
+        controller: 'SignupController',
+        controllerAs: 'signupCtrl'
+    });
     $stateProvider.state('Login',{
         url: '/login',
         template: loginControllerTemplate,

@@ -6,6 +6,7 @@ import {default as constantService } from "./service/ConstantService";
 const loginModule = angular.module('login',[]);
 
 loginModule.controller('LoginController', LoginController);
+
 loginModule.service('ConstantService', constantService);
 loginModule.directive('yearCalendar', YearCalendarDirective);
 
