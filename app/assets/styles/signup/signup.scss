@@ -30,9 +30,10 @@ div.sign-up{
 figure#diagram{
   clear: left;
   width: 80%;
-  height: 10em;
+  height: 20em;
   margin-left: 10%;
   background: white;
+  overflow: scroll;
 }
 figure#diagram {
   figcaption{

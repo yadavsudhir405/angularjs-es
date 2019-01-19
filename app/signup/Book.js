@@ -29,6 +29,10 @@ let EdgeCollection = Backbone.Collection.extend({
 });
 
 let Graph = Backbone.Model.extend({
+    attributes:{
+      nodes: new NodeCollection([]),
+      edges: new EdgeCollection([])
+    },
     initialize: function (attrs, opt) {
         opt = opt || {};
         this.set("nodes",new NodeCollection([]));
