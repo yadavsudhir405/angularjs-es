@@ -1,9 +1,6 @@
-import {Graph,Node,Edge} from "./Book";
-import CustomReact from "./CustomReactangle";
-import Logo from "./Logo";
+import {customElement, customeElementView} from "./htmlNode"
 class SignupController {
     constructor(joint){
-         this.experimentbackbone();
         this.draReactangle(joint);
     }
     draReactangle(joint) {
@@ -22,45 +19,19 @@ class SignupController {
             }
         });
 
-        let logo1 = new joint.shapes.examples.Logo();
-        logo1.attr({
-            o:{
-                refWidth: "100%",
-                refHeight: "100%",
-                refX:"10%",
-                refY:"10%"
+        let e1 = new customElement({
+            attrs:{
+                rect: {fill: 'red', text: 'Hero',strokeWidth:5}
             },
-            i:{
-                refWidth:"100%",
-                refHeight:"90%",
-                refX:"10%",
-                refY:"20%"
-            }
+            position: { x: 80, y: 80 },
+            size: { width: 300, height: 100 }
         });
-        logo1.position(10,30);
-        logo1.resize(300, 200);
-
-        let logo2 = logo1.clone();
-        logo2.translate(600,0);
-        logo1.addTo(graph);
-        logo2.addTo(graph);
-        let link = new joint.shapes.standard.Link();
-        link.source(logo1);
-        link.target(logo2);
-
-        link.addTo(graph);
-
-    }
-    experimentbackbone(){
-        let graph = new Graph();
-        let node1 = new Node({id: 1, name: "First Node"});
-        let node2 = new Node({id: 2, name: "Second Node"});
-        let edge1 = new Edge({fromNode: 1, toNode: 2});
-        graph.addNode(node1);
-        graph.addNode(node2);
-        graph.addEdge(edge1);
-        console.log("***" + JSON.stringify(graph));
-        console.log(JSON.stringify(graph.attributes))
+        /*e1.resize(300,100);
+        e1.position(100,50);*/
+        let e2 = e1.clone();
+        e2.translate(500,0);
+        e1.addTo(graph);
+        e2.addTo(graph);
     }
 }
 export default SignupController;

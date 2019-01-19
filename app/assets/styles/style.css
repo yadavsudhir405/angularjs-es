@@ -330,6 +330,7 @@ div.sign-up {
 
 figure#diagram {
   clear: left;
+  position: relative;
   width: 80%;
   height: 20em;
   margin-left: 10%;
@@ -338,6 +339,15 @@ figure#diagram {
 
 figure#diagram figcaption {
   border-bottom: 1px solid black; }
+
+.html-view-header {
+  position: absolute;
+  z-index: 2; }
+
+.html-view-header h1 {
+  position: absolute;
+  left: 100px;
+  top: 25px; }
 
 header, footer {
   width: 100%;
