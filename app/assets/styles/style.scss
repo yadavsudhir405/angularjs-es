@@ -1,59 +1,12 @@
 @import "../../../node_modules/normalize.css";
-@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./setting";
 @import "~codemirror/lib/codemirror.css";
 @import "header/AppHeader";
 @import "demo/demo";
 @import "login/login";
+@import "signup/signup";
 
-$on-hover-color: hsl(240, 100%, 30%);
 
-html {
-  font-size: 100%;
-}
-* {
-  box-sizing: border-box;
-}
-h1,h2,h3,h4,h5,p {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-image: linear-gradient(0deg,hsl(15, 72%, 80%),white);
-  font-family: Verdana,Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1em;
-  overflow: scroll;
-  position: relative;
-  color: black;
-  width: 90%;
-  margin: 2em 5%;
-  border-radius: 0.5em;
-  border: 0.2em solid black;
-  box-shadow: 0.2em 0.2em hsl(300,50%,20%);
-}
-
-main {
-  font-size: 1em;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-}
-main p {
-  padding: 0.25em ;
-}
-section {
-  margin: 0.5em 3%;
-}
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-  color: $on-hover-color;
-}
 header, footer {
   width: 100%;
   margin: 0.04em 0;

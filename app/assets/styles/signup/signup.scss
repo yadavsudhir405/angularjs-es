@@ -1,0 +1,41 @@
+div.sign-up{
+  width: 80%;
+  margin: 0 10%;
+  label{
+    width: 10%;
+    text-align: right;
+    float: left;
+    padding-top: 0.4em;
+  }
+  input{
+    margin-left: 2%;
+   display: block;
+  }
+  .box1, .box2{
+    width: 25%;
+    height: 10em;
+    margin-bottom: 1em;
+  }
+  .box1{
+    background: #000099;
+    float: left;
+  }
+  .box2{
+    width: 25%;
+    padding-top: 4em;
+    background: red;
+  }
+}
+
+figure#diagram{
+  clear: left;
+  width: 80%;
+  height: 10em;
+  margin-left: 10%;
+  background: white;
+}
+figure#diagram {
+  figcaption{
+    border-bottom: 1px solid black;
+  }
+}
