@@ -1,5 +1,6 @@
 import {Graph,Node,Edge} from "./Book";
 import CustomReact from "./CustomReactangle";
+import Logo from "./Logo";
 class SignupController {
     constructor(joint){
          this.experimentbackbone();
@@ -21,30 +22,34 @@ class SignupController {
             }
         });
 
-        var rect = new joint.shapes.examples.CustomReact();
-        rect.position(10, 30);
-        rect.resize(100, 40);
-
-        rect.addTo(graph);
-
-        var rect2 = rect.clone();
-        rect2.translate(300, 0);
-        let wordText = joint.util.breakText("Welcome to Hello World",{width:50,height:40});
-        rect2.attr({
-            rx:5,
-            ry:5,
-            label:{
-                text: wordText,
-
+        let logo1 = new joint.shapes.examples.Logo();
+        logo1.attr({
+            o:{
+                refWidth: "100%",
+                refHeight: "100%",
+                refX:"10%",
+                refY:"10%"
+            },
+            i:{
+                refWidth:"100%",
+                refHeight:"90%",
+                refX:"10%",
+                refY:"20%"
             }
         });
-        rect2.addTo(graph);
+        logo1.position(10,30);
+        logo1.resize(300, 200);
 
-        var link = new joint.shapes.standard.Link();
-        link.source(rect);
-        link.target(rect2);
+        let logo2 = logo1.clone();
+        logo2.translate(600,0);
+        logo1.addTo(graph);
+        logo2.addTo(graph);
+        let link = new joint.shapes.standard.Link();
+        link.source(logo1);
+        link.target(logo2);
+
         link.addTo(graph);
-        paper.translate(10,50);
+
     }
     experimentbackbone(){
         let graph = new Graph();
