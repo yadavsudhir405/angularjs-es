@@ -1,4 +1,5 @@
 import {Graph,Node,Edge} from "./Book";
+import CustomReact from "./CustomReactangle";
 class SignupController {
     constructor(joint){
          this.experimentbackbone();
@@ -20,18 +21,10 @@ class SignupController {
             }
         });
 
-        var rect = new joint.shapes.standard.Rectangle();
+        var rect = new joint.shapes.examples.CustomReact();
         rect.position(10, 30);
         rect.resize(100, 40);
-        rect.attr({
-            body: {
-                fill: 'blue'
-            },
-            label: {
-                text: 'Hello',
-                fill: 'white'
-            }
-        });
+
         rect.addTo(graph);
 
         var rect2 = rect.clone();
