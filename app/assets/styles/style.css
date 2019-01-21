@@ -26,13 +26,6 @@ body {
   border: 0.2em solid black;
   box-shadow: 0.2em 0.2em #4d1a4d; }
 
-input[type="text"], input[type="email"] {
-  width: 25%;
-  display: block;
-  height: 2em;
-  border-radius: 0.3em;
-  margin-bottom: 0.5em; }
-
 main {
   font-size: 1em;
   width: 98%;
@@ -305,28 +298,24 @@ section.main-content > article:first-child > img {
   column-gap: 1.5em;
   column-span: all; }
 
-div.sign-up {
+div.sign-up > form {
   width: 80%;
-  margin: 0 10%; }
-  div.sign-up label {
-    width: 10%;
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-column-gap: 1em; }
+  div.sign-up > form label {
     text-align: right;
-    float: left;
-    padding-top: 0.4em; }
-  div.sign-up input {
-    margin-left: 2%;
-    display: block; }
-  div.sign-up .box1, div.sign-up .box2 {
-    width: 25%;
-    height: 10em;
-    margin-bottom: 1em; }
-  div.sign-up .box1 {
-    background: #000099;
-    float: left; }
-  div.sign-up .box2 {
-    width: 25%;
-    padding-top: 4em;
-    background: red; }
+    padding-top: 0.6em; }
+
+form[name="signup"] .sex-section {
+  padding-top: 0.5em; }
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 30%;
+  height: 2em;
+  border-radius: 0.3em;
+  margin-bottom: 0.5em; }
 
 figure#diagram {
   position: relative;
