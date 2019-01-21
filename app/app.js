@@ -6,6 +6,7 @@ import {default as loginModule} from "./login/index";
 import { default as headerModule } from "./header/index";
 import {default as unathorizedHandleModule } from "./unathorized/index";
 import {default as signupModule} from "./signup";
+import "../node_modules/@fortawesome/fontawesome-free/js/all"
 
 import demoControllerTemplate from "./demo/template/demo.html";
 import loginControllerTemplate from "./login/template/Login.html";

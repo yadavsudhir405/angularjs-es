@@ -47,8 +47,15 @@ figure#diagram {
   //left: 100px;
   //top:10px;
 }
-.html-view-header h1 {
+.html-view-header label {
   position: absolute;
-  left:100px;
-  top:25px;
+  left:120px;
+  top:8px;
+  font-size: 3em;
+}
+.breach {
+  color: red;
+}
+.su{
+  color: green;
 }

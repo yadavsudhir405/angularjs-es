@@ -11,7 +11,7 @@ let customElement = joint.shapes.html.Element = joint.shapes.basic.Rect.extend({
 let customeElementView = joint.shapes.html.ElementView = joint.dia.ElementView.extend({
     template: [
         '<div class="html-view-header">',
-        '<h1>Hello</h1>',
+        '<label></label>',
         '</div>'
     ].join(''),
     initialize: function () {
@@ -30,6 +30,7 @@ let customeElementView = joint.shapes.html.ElementView = joint.dia.ElementView.e
     updateBox: function() {
         // Set the position and dimension of the box so that it covers the JointJS element.
         var bbox = this.model.getBBox();
+            this.$box.find('label').html(this.model.get("label"));
         // Example of updating the HTML with a data stored in the cell model.
         this.$box.css({
             width: bbox.width,

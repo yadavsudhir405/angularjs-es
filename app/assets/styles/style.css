@@ -344,10 +344,20 @@ figure#diagram figcaption {
   position: absolute;
   z-index: 2; }
 
-.html-view-header h1 {
+.html-view-header label {
   position: absolute;
-  left: 100px;
-  top: 25px; }
+  left: 120px;
+  top: 8px;
+  font-size: 3em; }
+
+.breach {
+  color: red; }
+
+.su {
+  color: green; }
+
+.fa-clock {
+  font-size: 0.5em; }
 
 header, footer {
   width: 100%;
