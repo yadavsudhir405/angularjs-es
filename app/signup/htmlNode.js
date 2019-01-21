@@ -19,6 +19,7 @@ let customeElementView = joint.shapes.html.ElementView = joint.dia.ElementView.e
         joint.dia.ElementView.prototype.initialize.apply(this, arguments);
 
         this.$box = $(_.template(this.template)());
+        this.model.on('change', this.updateBox, this);
         this.updateBox();
     },
     render: function() {

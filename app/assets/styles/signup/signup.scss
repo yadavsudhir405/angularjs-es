@@ -28,7 +28,6 @@ div.sign-up{
 }
 
 figure#diagram{
-  clear: left;
   position: relative;
   width: 80%;
   height: 20em;
@@ -41,11 +40,13 @@ figure#diagram {
     border-bottom: 1px solid black;
   }
 }
+figure#diagram-holder{
+  display: inline-block;
+  position: relative;
+}
 .html-view-header {
   position: absolute;
-  z-index: 2
-  //left: 100px;
-  //top:10px;
+  z-index: 2;
 }
 .html-view-header label {
   position: absolute;
