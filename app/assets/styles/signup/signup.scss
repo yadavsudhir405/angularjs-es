@@ -12,6 +12,9 @@ div.sign-up > form{
 }
 form[name="signup"] .sex-section{
   padding-top: 0.5em;
+  label{
+    padding-right: 1%;
+  }
 }
 input[type="text"] ,input[type="email"],input[type="password"]{
   width: 50%;
