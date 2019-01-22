@@ -1,28 +1,37 @@
-div.sign-up > form{
+$input-height: 2em;
+div.sign-up > form {
   width: 80%;
   margin: 0 10%;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: $input-height;
   grid-row-gap: 0.5em;
-  label{
+  label {
     text-align: right;
     padding-top: 0.6em;
     padding-right: 20%;
   }
+
 }
-form[name="signup"] .sex-section{
-  padding-top: 0.5em;
-  label{
-    padding-right: 1%;
+
+form[name="signup"] {
+  .sex, .languages {
+    padding-top: 0.5em;
+    label {
+      padding-right: 1%;
+    }
+    grid-column-start: 2;
+    grid-column-end: 5;
   }
 }
-input[type="text"] ,input[type="email"],input[type="password"]{
-  width: 50%;
-  height: 2em;
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  height: $input-height;
   border-radius: 0.3em;
 }
 
-figure#diagram{
+figure#diagram {
   position: relative;
   width: 80%;
   height: 20em;
@@ -30,28 +39,34 @@ figure#diagram{
   background: white;
   overflow: scroll;
 }
+
 figure#diagram {
-  figcaption{
+  figcaption {
     border-bottom: 1px solid black;
   }
 }
-figure#diagram-holder{
+
+figure#diagram-holder {
   display: inline-block;
   position: relative;
 }
+
 .html-view-header {
   position: absolute;
   z-index: 2;
 }
+
 .html-view-header label {
   position: absolute;
-  left:120px;
-  top:8px;
+  left: 120px;
+  top: 8px;
   font-size: 3em;
 }
+
 .breach {
   color: red;
 }
-.su{
+
+.su {
   color: green;
 }
