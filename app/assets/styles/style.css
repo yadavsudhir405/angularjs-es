@@ -309,12 +309,13 @@ div.sign-up > form {
     text-align: right;
     padding-top: 0.6em;
     padding-right: 20%; }
+  div.sign-up > form .col-2-to-col-5 {
+    grid-column-start: 2;
+    grid-column-end: 5; }
 
-form[name="signup"] .sex, form[name="signup"] .languages {
-  padding-top: 0.5em;
-  grid-column-start: 2;
-  grid-column-end: 5; }
-  form[name="signup"] .sex label, form[name="signup"] .languages label {
+form[name="signup"] .sex {
+  padding-top: 0.5em; }
+  form[name="signup"] .sex label {
     padding-right: 1%; }
 
 input[type="text"], input[type="email"], input[type="password"] {

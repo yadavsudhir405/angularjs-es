@@ -9,12 +9,23 @@
         <label for="email">Email:</label>
         <input type="email"  id="email" name="email"/>
 
+        <label for="mobileNumber">Mobile:</label>
+        <input type="text" id="mobileNumber" name="mobile">
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
         <label for="password">Password:</label>
         <input type="password"  id="password" name="password"/>
 
+        <label  for="dateOfBirth">Date of Birth:</label>
+        <input type="date" class="col-2-to-col-5" id="dateOfBirth" name="dob">
+
+        <label for="age">Height:</label>
+        <input type="range" class="col-2-to-col-5" id="age" min="5" max="8" name="height">
 
         <label>Sex:</label>
-        <div class="sex">
+        <div class="sex col-2-to-col-5">
             <input type="radio"  id="male" name="sex" value="Male"/>
             <label for="male">Male</label>
 
@@ -22,8 +33,8 @@
             <label for="female">Female</label>
         </div>
 
-        <label >Language</label>
-        <div class="languages">
+        <label >Language:</label>
+        <div class="languages col-2-to-col-5">
             <input type="checkbox" id="hindi" name="languages" value="Hindi"/>
             <label for="hindi">Hindi</label>
             <input type="checkbox" id ="english" name="languages" value="English"/>
@@ -34,13 +45,33 @@
             <label for="bengali">Bengali</label>
         </div>
 
-
+        <label for="city">Current City:</label>
+        <select id="city" class="col-2-to-col-5" name="city">
+            <option value="Bangalore">Bangalore</option>
+            <option value="Bangalore">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+        <label for="cityLivedIn">Previous LivedIn Cities:</label>
+        <select class="col-2-to-col-5" id="cityLivedIn">
+            <optgroup label="North">
+                <option value="New Delhi">New Delhi</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Ranchi">Ranchi</option>
+            </optgroup>
+            <optgroup label="South">
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mangalore">Mangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </optgroup>
+        </select>
     </form>
-    <!--<figure id="diagram">
+    <figure id="diagram">
         <figcaption>
             SVG Elements
         </figcaption>
         <div id="diagram-holder">
         </div>
-    </figure>-->
+    </figure>
 </div>

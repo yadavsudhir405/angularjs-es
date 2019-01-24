@@ -11,17 +11,19 @@ div.sign-up > form {
     padding-top: 0.6em;
     padding-right: 20%;
   }
+  .col-2-to-col-5{
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
 
 }
 
 form[name="signup"] {
-  .sex, .languages {
+  .sex{
     padding-top: 0.5em;
     label {
       padding-right: 1%;
     }
-    grid-column-start: 2;
-    grid-column-end: 5;
   }
 }
 
