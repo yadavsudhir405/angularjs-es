@@ -10,6 +10,7 @@ const devConfigs = {
         hot: true,
         publicPath:"/yadsud/",
         index: 'index.html',
+
         historyApiFallback: {
             index: '/yadsud/index.html'
         }
