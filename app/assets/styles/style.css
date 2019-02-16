@@ -326,7 +326,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 figure#diagram {
   position: relative;
   width: 80%;
-  height: 20em;
+  height: 50em;
   margin-left: 10%;
   background: white;
   overflow: scroll; }
@@ -353,6 +353,11 @@ figure#diagram-holder {
 
 .su {
   color: green; }
+
+.custom-highlighter rect {
+  stroke: green !important;
+  stroke-width: 10px;
+  padding: 10px; }
 
 .fa-clock {
   font-size: 0.5em; }

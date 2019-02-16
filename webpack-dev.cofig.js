@@ -8,11 +8,11 @@ const devConfigs = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         hot: true,
-        publicPath:"/yadsud/",
+       // publicPath:"/yadsud/",
         index: 'index.html',
 
         historyApiFallback: {
-            index: '/yadsud/index.html'
+            index: '/index.html'
         }
     },
 };

@@ -13,7 +13,7 @@ const entries = {
 const outputs = {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/yadsud/'
+   // publicPath: '/yadsud/'
 
 };
 const rules = [
